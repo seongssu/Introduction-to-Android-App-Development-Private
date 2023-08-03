@@ -13,7 +13,7 @@ class SignInActivity : AppCompatActivity() {
 
         val btn_calllognin =findViewById<Button>(R.id.btnlogin)
         btn_calllognin.setOnClickListener {
-            val edit_id = findViewById<EditText>(R.id.editText1)
+            val edit_id = findViewById<EditText>(R.id.editId)
             val strData =edit_id.text.toString()
             val intent = Intent(this,HomeActivity::class.java)
             intent.putExtra("dataFromSignInActivity", strData)
