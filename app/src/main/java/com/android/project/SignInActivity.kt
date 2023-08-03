@@ -15,16 +15,18 @@ class SignInActivity : AppCompatActivity() {
         val edit_id = findViewById<EditText>(R.id.editTextId1_1)
         val edit_psw = findViewById<EditText>(R.id.editTextPassword2_1)
         val btn_calllognin1_1 = findViewById<Button>(R.id.btnlogin1_1)
+
         btn_calllognin1_1.setOnClickListener {
+            val intent2_1_id = intent.getStringExtra("dataFromSignUpActivityId")
+            val intent2_2_name = intent.getStringExtra("dataFromSignUpActivityName")
+            val intent2_3_psw = intent.getStringExtra("dataFromSignUpActivityPsw")
 
             val id = edit_id.text.toString()
             val psw = edit_psw.text.toString()
 
             if (!id.isEmpty() && !psw.isEmpty()) {
                 val intent1 = Intent(this, HomeActivity::class.java)
-                val intent2_1_id = intent.getStringExtra("dataFromSignUpActivityId")
-                val intent2_2_name = intent.getStringExtra("dataFromSignUpActivityName")
-                val intent2_3_psw = intent.getStringExtra("dataFromSignUpActivityPsw")
+
                 if(id == intent2_1_id && psw == intent2_3_psw){
                     startActivity(intent1)
                     intent1.putExtra("dataFromSignInActivityId",id)
