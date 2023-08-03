@@ -1,9 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity">
+    tools:context=".SignUpActivity"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        app:srcCompat="@drawable/join" />
+
+    <TextView
+        android:id="@+id/textView3_2"
+        android:layout_marginTop="30dp"
+        style="@style/textview3"
+        android:typeface="sans"
+        android:layout_marginHorizontal="25dp"
+        />
+    <EditText
+        android:id="@+id/edittextName3_2"
+        style="@style/edittext3"
+        android:inputType="text"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/textView1_2"
+        style="@style/textview1"
+        android:typeface="sans"
+        android:layout_marginHorizontal="25dp"
+        />
+    <EditText
+        android:id="@+id/editTextId1_2"
+        style="@style/edittext1"
+        android:inputType="text"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <TextView
+        android:id="@+id/textView2_2"
+        android:layout_marginTop="20dp"
+        style="@style/textview2"
+        android:layout_marginHorizontal="25dp"
+        />
+    <EditText
+        android:id="@+id/editTextPassword2_2"
+        style="@style/edittext2"
+        android:inputType="textPassword"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        style="@style/button2"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="30dp"
+        android:text="회원가입" />
+
+</LinearLayout>
