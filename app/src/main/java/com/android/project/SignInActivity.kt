@@ -11,11 +11,11 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signin)
 
-        var btn_calllognin =findViewById<Button>(R.id.btnlogin)
+        val btn_calllognin =findViewById<Button>(R.id.btnlogin)
         btn_calllognin.setOnClickListener {
-            var edit_id = findViewById<EditText>(R.id.editTextText1)
-            var strData =edit_id.text.toString()
-            var intent = Intent(this,HomeActivity::class.java)
+            val edit_id = findViewById<EditText>(R.id.editText1)
+            val strData =edit_id.text.toString()
+            val intent = Intent(this,HomeActivity::class.java)
             intent.putExtra("dataFromSignInActivity", strData)
             startActivity(intent)
         }
