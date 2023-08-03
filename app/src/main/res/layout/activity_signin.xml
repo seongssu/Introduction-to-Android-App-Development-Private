@@ -54,7 +54,7 @@
 
     <Button
         android:layout_marginTop="10dp"
-        android:id="@+id/btnpassword"
+        android:id="@+id/btnjoin"
         style="@style/button2"
         android:text="회원가입"
         android:layout_marginHorizontal="25dp"/>
