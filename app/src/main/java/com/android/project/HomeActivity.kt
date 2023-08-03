@@ -10,7 +10,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         val strData = intent.getStringExtra("dataFromSignInActivity")
-        val edit_id =findViewById<EditText>(R.id.edit_Text1)
-        edit_id.setText(strData)
+        val edit_textid =findViewById<EditText>(R.id.edit_textId)
+        edit_textid.setText(strData)
     }
 }
