@@ -15,8 +15,8 @@ class SignInActivity : AppCompatActivity() {
 
         val btn_calllognin = findViewById<Button>(R.id.btnlogin)
         btn_calllognin.setOnClickListener {
-            val edit_id = findViewById<EditText>(R.id.editId)
-            val edit_psw = findViewById<EditText>(R.id.editTextPassword)
+            val edit_id = findViewById<EditText>(R.id.editTextId1_1)
+            val edit_psw = findViewById<EditText>(R.id.editTextPassword2_1)
             val id = edit_id.text.toString()
             val psw = edit_psw.text.toString()
             val strData = edit_id.text.toString()

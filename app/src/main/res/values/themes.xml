@@ -16,6 +16,12 @@
         <item name="android:textSize">15sp</item>
         <item name="android:text">비밀번호</item>
     </style>
+    <style name="textview3">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:text">이름</item>
+    </style>
     <style name="edittext1">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -27,6 +33,12 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">15sp</item>
         <item name="android:hint">비밀번호를 입력하세요</item>
+    </style>
+    <style name="edittext3">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:hint">이름을 입력하세요</item>
     </style>
     <style name="imageview">
         <item name="android:layout_width">match_parent</item>
