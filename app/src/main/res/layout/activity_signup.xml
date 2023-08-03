@@ -21,7 +21,7 @@
         android:layout_marginHorizontal="25dp"
         />
     <EditText
-        android:id="@+id/edittextName3_2"
+        android:id="@+id/editTextName3_2"
         style="@style/edittext3"
         android:inputType="text"
         android:layout_marginHorizontal="20dp"
@@ -65,6 +65,6 @@
         style="@style/button2"
         android:layout_marginHorizontal="25dp"
         android:layout_marginTop="30dp"
-        android:text="회원가입" />
+         />
 
 </LinearLayout>
