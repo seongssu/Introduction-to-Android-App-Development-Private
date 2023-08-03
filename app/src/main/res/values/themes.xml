@@ -22,6 +22,18 @@
         <item name="android:textSize">15sp</item>
         <item name="android:text">이름</item>
     </style>
+    <style name="textview4">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:text">나이</item>
+    </style>
+    <style name="textview5">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:text">MBTI</item>
+    </style>
     <style name="edittext1">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -55,6 +67,12 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">15sp</item>
         <item name="android:text">회원가입</item>
+    </style>
+    <style name="button3">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:text">종료</item>
     </style>
     <style name="Theme.Project" parent="Base.Theme.Project" />
 </resources>
