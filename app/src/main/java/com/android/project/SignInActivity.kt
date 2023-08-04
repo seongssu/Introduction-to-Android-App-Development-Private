@@ -38,8 +38,6 @@ class SignInActivity : AppCompatActivity() {
                     saveData("dataFromSignInActivityMbti", intent5_1_mbti ?: "")
                     val intent1 = Intent(this, HomeActivity::class.java)
                     startActivity(intent1)
-                    edit_id.text.clear()
-                    edit_psw.text.clear()
                     Toast.makeText(this, "로그인 되었습니다.", Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(this, "회원가입 부터 해주세요", Toast.LENGTH_SHORT).show()
@@ -52,8 +50,6 @@ class SignInActivity : AppCompatActivity() {
         btn_calljoin2_1.setOnClickListener {
             val intent2_1 = Intent(this, SignUpActivity::class.java)
             signInLauncher.launch(intent2_1)
-            edit_id.text.clear()
-            edit_psw.text.clear()
         }
         signInLauncher =
             registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
