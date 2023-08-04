@@ -7,30 +7,38 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 
 class SignInActivity : AppCompatActivity() {
+    lateinit var signInLauncher: ActivityResultLauncher<Intent>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signin)
+
         val edit_id = findViewById<EditText>(R.id.editTextId1_1)
         val edit_psw = findViewById<EditText>(R.id.editTextPassword2_1)
         val btn_calllognin1_1 = findViewById<Button>(R.id.btnlogin1_1)
 
         btn_calllognin1_1.setOnClickListener {
             val intent2_1_id = intent.getStringExtra("dataFromSignUpActivityId")
-            val intent2_2_name = intent.getStringExtra("dataFromSignUpActivityName")
-            val intent2_3_psw = intent.getStringExtra("dataFromSignUpActivityPsw")
+            val intent3_1_name = intent.getStringExtra("dataFromSignUpActivityName")
+            val intent2_1_psw = intent.getStringExtra("dataFromSignUpActivityPsw")
+
+            val intent2_1 = Intent(this, SignUpActivity::class.java)
 
             val id = edit_id.text.toString()
             val psw = edit_psw.text.toString()
 
             if (!id.isEmpty() && !psw.isEmpty()) {
+
                 val intent1 = Intent(this, HomeActivity::class.java)
 
-                if(id == intent2_1_id && psw == intent2_3_psw){
+                if (id == intent2_1_id && psw == intent2_1_psw) {
+                    intent1.putExtra("dataFromSignInActivityId", id)
+                    intent1.putExtra("dataFromSignInActivityName", intent3_1_name)
                     startActivity(intent1)
-                    intent1.putExtra("dataFromSignInActivityId",id)
-                    intent1.putExtra("dataFromSignInActivityName",intent2_2_name)
+                    signInLauncher.launch(intent2_1)
                     edit_id.text.clear()
                     edit_psw.text.clear()
                     Toast.makeText(this, "로그인 되었습니다.", Toast.LENGTH_SHORT).show()
@@ -43,8 +51,8 @@ class SignInActivity : AppCompatActivity() {
         }
         val btn_calljoin2_1 = findViewById<Button>(R.id.btnjoin2_1)
         btn_calljoin2_1.setOnClickListener {
-            val intent1 = Intent(this, SignUpActivity::class.java)
-            startActivity(intent1)
+            val intent2_1 = Intent(this, SignUpActivity::class.java)
+            startActivity(intent2_1)
             edit_id.text.clear()
             edit_psw.text.clear()
         }
