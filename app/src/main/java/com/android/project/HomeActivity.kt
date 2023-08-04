@@ -10,12 +10,11 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-
-        val id = intent.getStringExtra("dataFromSignInActivityId")
-        val name = intent.getStringExtra("dataFromSignInActivityName")
-        val age = intent.getStringExtra("dataFromSignInActivityAge")
-        val mbti = intent.getStringExtra("dataFromSignInActivityMbti")
-        val edit_textid =findViewById<EditText>(R.id.editTextId1_3)
+        val id = getData("dataFromSignInActivityId")
+        val name = getData("dataFromSignInActivityName")
+        val age = getData("dataFromSignInActivityAge")
+        val mbti = getData("dataFromSignInActivityMbti")
+        val edit_textid = findViewById<EditText>(R.id.editTextId1_3)
         val edit_textname = findViewById<EditText>(R.id.editTextName3_3)
         val edit_Text_age = findViewById<EditText>(R.id.editTextAge4_3)
         val edit_Text_mbti = findViewById<EditText>(R.id.editTextMbti5_3)
@@ -30,4 +29,10 @@ class HomeActivity : AppCompatActivity() {
             finish()
         }
     }
+
+    private fun getData(key: String): String? {
+        val sharedPreferences = getSharedPreferences("my_shared_prefs", MODE_PRIVATE)
+        return sharedPreferences.getString(key, null)
+    }
 }
+
