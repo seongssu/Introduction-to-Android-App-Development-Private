@@ -52,6 +52,18 @@
         <item name="android:textSize">15sp</item>
         <item name="android:hint">이름을 입력하세요</item>
     </style>
+    <style name="edittext4">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:hint">나이를 입력하세요</item>
+    </style>
+    <style name="edittext5">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:hint">mbti를 입력하세요</item>
+    </style>
     <style name="imageview">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
