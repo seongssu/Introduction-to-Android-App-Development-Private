@@ -14,9 +14,9 @@ import androidx.activity.result.contract.ActivityResultContracts
 class SignInActivity : AppCompatActivity() {
     private var intent1_1_id: String? = null
     private var intent2_1_psw: String? = null
-    private var  intent3_1_name:String? = null
-    private var intent4_1_age:String? = null
-    private var intent5_1_mbti:String? = null
+    private var intent3_1_name: String? = null
+    private var intent4_1_age: String? = null
+    private var intent5_1_mbti: String? = null
     lateinit var signInLauncher: ActivityResultLauncher<Intent>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,16 +31,13 @@ class SignInActivity : AppCompatActivity() {
             val psw = edit_psw.text.toString()
 
             if (!id.isEmpty() && !psw.isEmpty()) {
-
-                val intent1 = Intent(this, HomeActivity::class.java)
-
                 if (id == intent1_1_id && psw == intent2_1_psw) {
-                    intent1.putExtra("dataFromSignInActivityId", id)
-                    intent1.putExtra("dataFromSignInActivityName", intent3_1_name)
-                    intent1.putExtra("dataFromSignInActivityAge",intent4_1_age)
-                    intent1.putExtra("dataFromSignInActivityMbti",intent5_1_mbti)
+                    saveData("dataFromSignInActivityId", id)
+                    saveData("dataFromSignInActivityName", intent3_1_name ?: "")
+                    saveData("dataFromSignInActivityAge", intent4_1_age ?: "")
+                    saveData("dataFromSignInActivityMbti", intent5_1_mbti ?: "")
+                    val intent1 = Intent(this, HomeActivity::class.java)
                     startActivity(intent1)
-                    setResult(Activity.RESULT_OK,intent1)
                     edit_id.text.clear()
                     edit_psw.text.clear()
                     Toast.makeText(this, "로그인 되었습니다.", Toast.LENGTH_SHORT).show()
@@ -58,18 +55,26 @@ class SignInActivity : AppCompatActivity() {
             edit_id.text.clear()
             edit_psw.text.clear()
         }
-        signInLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){result ->
-            if(result.resultCode== RESULT_OK){
-                val data = result.data
-                if(data !=null) {
-                    intent1_1_id = data.getStringExtra("dataFromSignUpActivityId")
-                    intent2_1_psw = data.getStringExtra("dataFromSignUpActivityPsw")
-                    intent3_1_name = data.getStringExtra("dataFromSignUpActivityName")
-                    intent4_1_age = data.getStringExtra("dataFromSignUpActivityAge")
-                    intent5_1_mbti= data.getStringExtra("dataFromSignUpActivity")
+        signInLauncher =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+                if (result.resultCode == RESULT_OK) {
+                    val data = result.data
+                    if (data != null) {
+                        intent1_1_id = data.getStringExtra("dataFromSignUpActivityId")
+                        intent2_1_psw = data.getStringExtra("dataFromSignUpActivityPsw")
+                        intent3_1_name = data.getStringExtra("dataFromSignUpActivityName")
+                        intent4_1_age = data.getStringExtra("dataFromSignUpActivityAge")
+                        intent5_1_mbti = data.getStringExtra("dataFromSignUpActivity")
+                    }
                 }
             }
-        }
     }
 
+    private fun saveData(key: String, value: String) {
+        val sharedPreferences = getSharedPreferences("my_shared_prefs", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString(key, value)
+        editor.apply()
+    }
 }
+
