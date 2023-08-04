@@ -16,9 +16,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginHorizontal="25dp"
+        android:layout_marginHorizontal="10dp"
         android:gravity="center"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
        >
 
         <TextView
@@ -41,7 +41,6 @@
         android:orientation="horizontal"
         android:layout_marginHorizontal="25dp"
         android:gravity="center"
-        android:layout_marginTop="5dp"
         >
 
         <TextView
@@ -64,7 +63,6 @@
         android:orientation="horizontal"
         android:layout_marginHorizontal="25dp"
         android:gravity="center"
-        android:layout_marginTop="5dp"
         >
 
         <TextView
@@ -86,7 +84,6 @@
         android:orientation="horizontal"
         android:layout_marginHorizontal="25dp"
         android:gravity="center"
-        android:layout_marginTop="5dp"
         >
 
         <TextView
@@ -106,8 +103,8 @@
     <Button
         android:id="@+id/btnlogin3_3"
         style="@style/button3"
-        android:layout_marginHorizontal="25dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
         android:onClick="doOnBtnClick"
          />
 </LinearLayout>
