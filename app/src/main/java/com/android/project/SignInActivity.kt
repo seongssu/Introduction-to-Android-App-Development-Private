@@ -1,5 +1,6 @@
 package com.android.project
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +12,11 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 
 class SignInActivity : AppCompatActivity() {
+    private var intent1_1_id: String? = null
+    private var intent2_1_psw: String? = null
+    private var  intent3_1_name:String? = null
+    private var intent4_1_age:String? = null
+    private var intent5_1_mbti:String? = null
     lateinit var signInLauncher: ActivityResultLauncher<Intent>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,12 +27,6 @@ class SignInActivity : AppCompatActivity() {
         val btn_calllognin1_1 = findViewById<Button>(R.id.btnlogin1_1)
 
         btn_calllognin1_1.setOnClickListener {
-            val intent2_1_id = intent.getStringExtra("dataFromSignUpActivityId")
-            val intent3_1_name = intent.getStringExtra("dataFromSignUpActivityName")
-            val intent2_1_psw = intent.getStringExtra("dataFromSignUpActivityPsw")
-
-            val intent2_1 = Intent(this, SignUpActivity::class.java)
-
             val id = edit_id.text.toString()
             val psw = edit_psw.text.toString()
 
@@ -34,11 +34,13 @@ class SignInActivity : AppCompatActivity() {
 
                 val intent1 = Intent(this, HomeActivity::class.java)
 
-                if (id == intent2_1_id && psw == intent2_1_psw) {
+                if (id == intent1_1_id && psw == intent2_1_psw) {
                     intent1.putExtra("dataFromSignInActivityId", id)
                     intent1.putExtra("dataFromSignInActivityName", intent3_1_name)
+                    intent1.putExtra("dataFromSignInActivityAge",intent4_1_age)
+                    intent1.putExtra("dataFromSignInActivityMbti",intent5_1_mbti)
                     startActivity(intent1)
-                    signInLauncher.launch(intent2_1)
+                    setResult(Activity.RESULT_OK,intent1)
                     edit_id.text.clear()
                     edit_psw.text.clear()
                     Toast.makeText(this, "로그인 되었습니다.", Toast.LENGTH_SHORT).show()
@@ -52,9 +54,22 @@ class SignInActivity : AppCompatActivity() {
         val btn_calljoin2_1 = findViewById<Button>(R.id.btnjoin2_1)
         btn_calljoin2_1.setOnClickListener {
             val intent2_1 = Intent(this, SignUpActivity::class.java)
-            startActivity(intent2_1)
+            signInLauncher.launch(intent2_1)
             edit_id.text.clear()
             edit_psw.text.clear()
         }
+        signInLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){result ->
+            if(result.resultCode== RESULT_OK){
+                val data = result.data
+                if(data !=null) {
+                    intent1_1_id = data.getStringExtra("dataFromSignUpActivityId")
+                    intent2_1_psw = data.getStringExtra("dataFromSignUpActivityPsw")
+                    intent3_1_name = data.getStringExtra("dataFromSignUpActivityName")
+                    intent4_1_age = data.getStringExtra("dataFromSignUpActivityAge")
+                    intent5_1_mbti= data.getStringExtra("dataFromSignUpActivity")
+                }
+            }
+        }
     }
+
 }
