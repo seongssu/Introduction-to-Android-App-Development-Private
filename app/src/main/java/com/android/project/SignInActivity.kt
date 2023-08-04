@@ -29,7 +29,6 @@ class SignInActivity : AppCompatActivity() {
         btn_calllognin1_1.setOnClickListener {
             val id = edit_id.text.toString()
             val psw = edit_psw.text.toString()
-
             if (!id.isEmpty() && !psw.isEmpty()) {
                 if (id == intent1_1_id && psw == intent2_1_psw) {
                     saveData("dataFromSignInActivityId", id)
@@ -46,6 +45,7 @@ class SignInActivity : AppCompatActivity() {
                 Toast.makeText(this, "아이디/비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show()
             }
         }
+
         val btn_calljoin2_1 = findViewById<Button>(R.id.btnjoin2_1)
         btn_calljoin2_1.setOnClickListener {
             val intent2_1 = Intent(this, SignUpActivity::class.java)
@@ -61,6 +61,8 @@ class SignInActivity : AppCompatActivity() {
                         intent3_1_name = data.getStringExtra("dataFromSignUpActivityName")
                         intent4_1_age = data.getStringExtra("dataFromSignUpActivityAge")
                         intent5_1_mbti = data.getStringExtra("dataFromSignUpActivity")
+                        edit_id.setText(intent1_1_id)
+                        edit_psw.setText(intent2_1_psw)
                     }
                 }
             }

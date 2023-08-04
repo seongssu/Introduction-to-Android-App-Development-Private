@@ -92,7 +92,6 @@
         android:id="@+id/btnjoin2_2"
         style="@style/button2"
         android:layout_marginHorizontal="25dp"
-        android:layout_marginTop="30dp"
          />
 
 </LinearLayout>
