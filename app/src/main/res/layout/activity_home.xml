@@ -7,24 +7,23 @@
     tools:context=".HomeActivity"
     android:orientation="vertical">
 
-
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/member"
-        android:layout_weight="1.2"/>
+        android:layout_height="310dp"
+        app:srcCompat="@drawable/member" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginHorizontal="25dp"
-        android:layout_weight="2">
+        android:layout_marginHorizontal="10dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+       >
 
         <TextView
             android:id="@+id/textView1_3"
             style="@style/textview1"
-            android:layout_weight="1"
             android:gravity="right"
              />
 
@@ -32,9 +31,80 @@
             android:id="@+id/editTextId1_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:inputType="text"
             android:gravity="left"
              />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="25dp"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/textView3_3"
+            style="@style/textview3"
+            android:gravity="right"
+            />
+
+        <EditText
+            android:id="@+id/editTextName3_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:gravity="left"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="25dp"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/textView4_3"
+            style="@style/textview4"
+            android:gravity="right"
+            />
+        <EditText
+            android:id="@+id/editTextAge4_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:gravity="left"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="25dp"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/textView5_3"
+            style="@style/textview5"
+            android:gravity="right"
+            />
+
+        <EditText
+            android:id="@+id/editTextMbti5_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:gravity="left"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnlogin3_3"
+        style="@style/button3"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:onClick="doOnBtnClick"
+         />
 </LinearLayout>

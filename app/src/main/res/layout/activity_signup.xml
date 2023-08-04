@@ -10,27 +10,25 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="210dp"
         app:srcCompat="@drawable/join" />
 
     <TextView
         android:id="@+id/textView3_2"
-        android:layout_marginTop="30dp"
         style="@style/textview3"
         android:typeface="sans"
         android:layout_marginHorizontal="25dp"
         />
     <EditText
-        android:id="@+id/edittextName3_2"
+        android:id="@+id/editTextName3_2"
         style="@style/edittext3"
         android:inputType="text"
         android:layout_marginHorizontal="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3_2" />
 
     <TextView
-        android:layout_marginTop="20dp"
         android:id="@+id/textView1_2"
         style="@style/textview1"
         android:typeface="sans"
@@ -43,11 +41,10 @@
         android:layout_marginHorizontal="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1_2" />
 
     <TextView
         android:id="@+id/textView2_2"
-        android:layout_marginTop="20dp"
         style="@style/textview2"
         android:layout_marginHorizontal="25dp"
         />
@@ -58,13 +55,44 @@
         android:layout_marginHorizontal="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2_2" />
+
+    <TextView
+        android:id="@+id/textView4_2"
+        style="@style/textview4"
+        android:layout_marginHorizontal="25dp"
+        />
+    <EditText
+        android:id="@+id/editTextAge4_2"
+        style="@style/edittext4"
+        android:inputType="text"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4_2"
+        />
+
+    <TextView
+        android:id="@+id/textView5_2"
+        style="@style/textview5"
+        android:layout_marginHorizontal="25dp"
+        />
+
+    <EditText
+        android:id="@+id/editTextMbti5_2"
+        style="@style/edittext5"
+        android:inputType="text"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5_2"
+        />
 
     <Button
         android:id="@+id/btnjoin2_2"
         style="@style/button2"
         android:layout_marginHorizontal="25dp"
         android:layout_marginTop="30dp"
-        android:text="회원가입" />
+         />
 
 </LinearLayout>
