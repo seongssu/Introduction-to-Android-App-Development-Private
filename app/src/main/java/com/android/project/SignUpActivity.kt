@@ -25,7 +25,7 @@ class SignUpActivity : AppCompatActivity() {
             val id2 = edit_id2.text.toString()
             val psw2 = edit_psw2.text.toString()
             val age2 = edit_age2.text.toString()
-            val mbti2 = edit_age2.text.toString()
+            val mbti2 = edit_mbti2.text.toString()
 
             if (!name2.isEmpty() && !id2.isEmpty() && !psw2.isEmpty() && !age2.isEmpty()&& !mbti2.isEmpty()) {
                 val intent2_1 = Intent(this, SignInActivity::class.java)
