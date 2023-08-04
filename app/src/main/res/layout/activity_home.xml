@@ -8,9 +8,12 @@
     android:orientation="vertical">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="310dp"
-        app:srcCompat="@drawable/member" />
+        android:layout_marginTop="30dp"
+        android:id="@+id/img"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +21,7 @@
         android:orientation="horizontal"
         android:layout_marginHorizontal="10dp"
         android:gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
        >
 
         <TextView
@@ -41,6 +44,7 @@
         android:orientation="horizontal"
         android:layout_marginHorizontal="25dp"
         android:gravity="center"
+        android:layout_marginTop="20dp"
         >
 
         <TextView
@@ -63,6 +67,7 @@
         android:orientation="horizontal"
         android:layout_marginHorizontal="25dp"
         android:gravity="center"
+        android:layout_marginTop="20dp"
         >
 
         <TextView
@@ -84,6 +89,7 @@
         android:orientation="horizontal"
         android:layout_marginHorizontal="25dp"
         android:gravity="center"
+        android:layout_marginTop="20dp"
         >
 
         <TextView
