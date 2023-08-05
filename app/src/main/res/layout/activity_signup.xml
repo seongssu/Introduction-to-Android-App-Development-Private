@@ -15,13 +15,15 @@
 
     <TextView
         android:id="@+id/textView3_2"
-        style="@style/textview3"
+        style="@style/textview1"
+        android:text="@string/name"
         android:typeface="sans"
         android:layout_marginHorizontal="25dp"
         />
     <EditText
         android:id="@+id/editTextName3_2"
-        style="@style/edittext3"
+        style="@style/edittext1"
+        android:hint="@string/inputname"
         android:inputType="text"
         android:layout_marginHorizontal="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,12 +33,14 @@
     <TextView
         android:id="@+id/textView1_2"
         style="@style/textview1"
+        android:text="@string/id"
         android:typeface="sans"
         android:layout_marginHorizontal="25dp"
         />
     <EditText
         android:id="@+id/editTextId1_2"
         style="@style/edittext1"
+        android:hint="@string/inputid"
         android:inputType="text"
         android:layout_marginHorizontal="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,12 +49,14 @@
 
     <TextView
         android:id="@+id/textView2_2"
-        style="@style/textview2"
+        style="@style/textview1"
+        android:text="@string/psw"
         android:layout_marginHorizontal="25dp"
         />
     <EditText
         android:id="@+id/editTextPassword2_2"
-        style="@style/edittext2"
+        style="@style/edittext1"
+        android:hint="@string/inputpsw"
         android:inputType="textPassword"
         android:layout_marginHorizontal="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,12 +65,14 @@
 
     <TextView
         android:id="@+id/textView4_2"
-        style="@style/textview4"
+        style="@style/textview1"
+        android:text="@string/age"
         android:layout_marginHorizontal="25dp"
         />
     <EditText
         android:id="@+id/editTextAge4_2"
-        style="@style/edittext4"
+        style="@style/edittext1"
+        android:hint="@string/inputage"
         android:inputType="text"
         android:layout_marginHorizontal="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,13 +82,15 @@
 
     <TextView
         android:id="@+id/textView5_2"
-        style="@style/textview5"
+        style="@style/textview1"
+        android:text="@string/mbti"
         android:layout_marginHorizontal="25dp"
         />
 
     <EditText
         android:id="@+id/editTextMbti5_2"
-        style="@style/edittext5"
+        style="@style/edittext1"
+        android:hint="@string/inputmbti"
         android:inputType="text"
         android:layout_marginHorizontal="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,8 +100,10 @@
 
     <Button
         android:id="@+id/btnjoin2_2"
-        style="@style/button2"
+        style="@style/edittext1"
+        android:text="@string/signup"
         android:layout_marginHorizontal="25dp"
+        android:background="@drawable/shape3"
          />
 
 </LinearLayout>

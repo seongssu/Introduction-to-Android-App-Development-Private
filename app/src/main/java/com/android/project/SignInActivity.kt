@@ -50,7 +50,7 @@ class SignInActivity : AppCompatActivity() {
                     startActivity(intent1)
                     Toast.makeText(this, "로그인 되었습니다.", Toast.LENGTH_SHORT).show()
                 } else {
-                    Toast.makeText(this, "회원가입 부터 해주세요", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "아이디/비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show()
                 }
             } else {
                 Toast.makeText(this, "아이디/비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show()
