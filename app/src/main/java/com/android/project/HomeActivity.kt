@@ -39,15 +39,13 @@ class HomeActivity : AppCompatActivity() {
         val randomNumber = Random.nextInt(0 , 5)
         edit_imageView.setImageResource(imageList[randomNumber])
 
-
-
         val btn_callexit = findViewById<Button>(R.id.btnlogin3_3)
         btn_callexit.setOnClickListener {
             finish()
         }
     }
 
-    private fun getData(key: String): String? {
+    fun getData(key: String): String? {
         val sharedPreferences = getSharedPreferences("my_shared_prefs", MODE_PRIVATE)
         return sharedPreferences.getString(key, null)
     }
