@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
 
     <ImageView
         android:layout_marginTop="30dp"
@@ -21,7 +22,7 @@
         android:orientation="horizontal"
         android:layout_marginHorizontal="10dp"
         android:gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="100dp"
        >
 
         <TextView
@@ -29,6 +30,11 @@
             style="@style/textview1"
             android:gravity="right"
              />
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="\t:\t\t"
+            />
 
         <EditText
             android:id="@+id/editTextId1_3"
@@ -36,6 +42,7 @@
             android:layout_height="wrap_content"
             android:inputType="text"
             android:gravity="left"
+            android:background="@android:color/transparent"
              />
     </LinearLayout>
     <LinearLayout
@@ -52,6 +59,11 @@
             style="@style/textview3"
             android:gravity="right"
             />
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="\t:\t\t"
+            />
 
         <EditText
             android:id="@+id/editTextName3_3"
@@ -59,6 +71,7 @@
             android:layout_height="wrap_content"
             android:inputType="text"
             android:gravity="left"
+            android:background="@android:color/transparent"
             />
     </LinearLayout>
     <LinearLayout
@@ -75,12 +88,18 @@
             style="@style/textview4"
             android:gravity="right"
             />
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="\t:\t\t"
+            />
         <EditText
             android:id="@+id/editTextAge4_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="text"
             android:gravity="left"
+            android:background="@android:color/transparent"
             />
     </LinearLayout>
     <LinearLayout
@@ -98,19 +117,32 @@
             android:gravity="right"
             />
 
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="\t:\t\t"
+            />
+
         <EditText
             android:id="@+id/editTextMbti5_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="text"
             android:gravity="left"
+            android:background="@android:color/transparent"
             />
     </LinearLayout>
+
     <Button
         android:id="@+id/btnlogin3_3"
         style="@style/button3"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="10dp"
-        android:onClick="doOnBtnClick"
-         />
+        android:layout_marginTop="100dp"
+        android:drawableLeft="@drawable/img"
+        android:paddingStart="130dp"
+        android:drawablePadding="-130dp"
+        android:background="@drawable/select"
+        android:layout_height="wrap_content"
+
+        android:onClick="doOnBtnClick" />
 </LinearLayout>

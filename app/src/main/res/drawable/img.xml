@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/img1"
+        android:drawable="@drawable/btn1"
+        android:width="20dp"
+        android:height="20dp"
+        android:layout_marginLeft="50dp"
+        />
+
+    <item
+        android:id="@+id/img2"
+        android:drawable="@drawable/btn2"
+        android:width="20dp"
+        android:height="20dp"
+        android:layout_marginLeft="50dp"
+        />
+
+</layer-list>
