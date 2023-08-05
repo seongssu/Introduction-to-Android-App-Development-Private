@@ -136,13 +136,13 @@
     <Button
         android:id="@+id/btnlogin3_3"
         style="@style/button3"
+        android:textColor="@drawable/select_text"
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="100dp"
-        android:drawableLeft="@drawable/img"
+        android:drawableStart="@drawable/img"
         android:paddingStart="130dp"
         android:drawablePadding="-130dp"
         android:background="@drawable/select"
         android:layout_height="wrap_content"
-
         android:onClick="doOnBtnClick" />
 </LinearLayout>
