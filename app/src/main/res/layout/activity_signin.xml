@@ -10,18 +10,20 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        style="@style/imageview"
+        style="@style/edittext1"
         android:src="@drawable/namecard" />
 
     <TextView
         android:id="@+id/textView1_1"
         style="@style/textview1"
+        android:text="@string/id"
         android:layout_marginHorizontal="25dp"
         android:typeface="sans" />
 
     <EditText
         android:id="@+id/editTextId1_1"
         style="@style/edittext1"
+        android:hint="@string/inputid"
         android:layout_marginHorizontal="20dp"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,13 +32,15 @@
 
     <TextView
         android:id="@+id/textView2_1"
-        style="@style/textview2"
+        style="@style/textview1"
+        android:text="@string/psw"
         android:layout_marginHorizontal="25dp"
         android:layout_marginTop="20dp" />
 
     <EditText
         android:id="@+id/editTextPassword2_1"
-        style="@style/edittext2"
+        style="@style/edittext1"
+        android:hint="@string/inputpsw"
         android:layout_marginHorizontal="20dp"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,17 +49,21 @@
 
     <Button
         android:id="@+id/btnlogin1_1"
-        style="@style/button1"
+        style="@style/edittext1"
+        android:text="@string/login"
         android:layout_marginHorizontal="25dp"
         android:layout_marginTop="60dp"
         android:onClick="doOnBtnClick"
+        android:background="@drawable/shape3"
         />
 
     <Button
         android:id="@+id/btnjoin2_1"
-        style="@style/button2"
+        style="@style/edittext1"
+        android:text="@string/signup"
         android:layout_marginHorizontal="25dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/shape3"
         />
 
 
