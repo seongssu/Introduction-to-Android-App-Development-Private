@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
+import com.android.project.spf.getData
 import kotlin.random.Random
 
 class HomeActivity : AppCompatActivity() {
@@ -22,10 +23,10 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        val id = getData("dataFromSignInActivityId")
-        val name = getData("dataFromSignInActivityName")
-        val age = getData("dataFromSignInActivityAge")
-        val mbti = getData("dataFromSignInActivityMbti")
+        val id = getData(this,"dataFromSignInActivityId")
+        val name = getData(this,"dataFromSignInActivityName")
+        val age = getData(this,"dataFromSignInActivityAge")
+        val mbti = getData(this,"dataFromSignInActivityMbti")
         val edit_textid = findViewById<EditText>(R.id.editTextId1_3)
         val edit_textname = findViewById<EditText>(R.id.editTextName3_3)
         val edit_Text_age = findViewById<EditText>(R.id.editTextAge4_3)
@@ -39,17 +40,12 @@ class HomeActivity : AppCompatActivity() {
         val randomNumber = Random.nextInt(0 , 5)
         edit_imageView.setImageResource(imageList[randomNumber])
 
-
-
         val btn_callexit = findViewById<Button>(R.id.btnlogin3_3)
         btn_callexit.setOnClickListener {
             finish()
         }
     }
 
-    private fun getData(key: String): String? {
-        val sharedPreferences = getSharedPreferences("my_shared_prefs", MODE_PRIVATE)
-        return sharedPreferences.getString(key, null)
-    }
+
 }
 
