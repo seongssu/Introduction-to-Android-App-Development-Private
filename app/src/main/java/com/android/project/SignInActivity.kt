@@ -42,10 +42,10 @@ class SignInActivity : AppCompatActivity() {
 
                 if (index >=0 && id == idList[index] && psw == pswList[index]) {
                     //널값일때는 else로 빠지기전에 java.lang.ArrayIndexOutOfBoundsException 에러가 생기기때문에 index>=0 조건을 추가한다.
-                    saveData("dataFromSignInActivityId", idList[index])
-                    saveData("dataFromSignInActivityName", nameList[index])
-                    saveData("dataFromSignInActivityAge", ageList[index] )
-                    saveData("dataFromSignInActivityMbti", mbtiList[index])
+                    spf.saveData(this,"dataFromSignInActivityId", idList[index] ?: "")
+                    spf.saveData(this,"dataFromSignInActivityName", nameList[index])
+                    spf.saveData(this,"dataFromSignInActivityAge", ageList[index] )
+                    spf.saveData(this,"dataFromSignInActivityMbti", mbtiList[index])
                     val intent1 = Intent(this, HomeActivity::class.java)
                     startActivity(intent1)
                     Toast.makeText(this, "로그인 되었습니다.", Toast.LENGTH_SHORT).show()
@@ -86,11 +86,6 @@ class SignInActivity : AppCompatActivity() {
             }
     }
 
-    private fun saveData(key: String, value: String) {
-        val sharedPreferences = getSharedPreferences("my_shared_prefs", MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-        editor.putString(key, value)
-        editor.apply()
-    }
+
 }
 
