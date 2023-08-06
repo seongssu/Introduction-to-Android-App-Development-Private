@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 
 object spf{
-     fun saveData(context: Context, key: String, value: String) {
+     fun saveData(context: Context, key: String, value:String) {
         val sharedPreferences = context.getSharedPreferences("spf",
             AppCompatActivity.MODE_PRIVATE
         )
@@ -12,11 +12,10 @@ object spf{
         editor.putString(key, value)
         editor.apply()
     }
-    fun getData(context:Context,key: String): String? {
+    fun getData(context:Context,key: String):String? {
         val sharedPreferences = context.getSharedPreferences("spf",
             AppCompatActivity.MODE_PRIVATE
         )
         return sharedPreferences.getString(key, null)
     }
-
 }

@@ -18,7 +18,7 @@ class SignInActivity : AppCompatActivity() {
      var intent4_1_age: String? = null
      var intent5_1_mbti: String? = null
     lateinit var signInLauncher: ActivityResultLauncher<Intent>
-    var idList = mutableListOf<String>()
+   companion object{ var idList = mutableListOf<String>()}
     var pswList = mutableListOf<String>()
     var nameList = mutableListOf<String>()
     var ageList = mutableListOf<String>()
@@ -38,13 +38,13 @@ class SignInActivity : AppCompatActivity() {
 
 
             if (!id.isEmpty() && !psw.isEmpty()) {
-                val index = idList.indexOf(id)
+                    val index = idList.indexOf(id)
 
                 if (index >=0 && id == idList[index] && psw == pswList[index]) {
                     //널값일때는 else로 빠지기전에 java.lang.ArrayIndexOutOfBoundsException 에러가 생기기때문에 index>=0 조건을 추가한다.
                     spf.saveData(this,"dataFromSignInActivityId", idList[index])
                     spf.saveData(this,"dataFromSignInActivityName", nameList[index])
-                    spf.saveData(this,"dataFromSignInActivityAge", ageList[index] )
+                    spf.saveData(this,"dataFromSignInActivityAge", ageList[index])
                     spf.saveData(this,"dataFromSignInActivityMbti", mbtiList[index])
                     val intent1 = Intent(this, HomeActivity::class.java)
                     startActivity(intent1)
