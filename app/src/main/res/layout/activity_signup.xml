@@ -14,6 +14,38 @@
         app:srcCompat="@drawable/join" />
 
     <TextView
+        android:id="@+id/textView1_2"
+        style="@style/textview1"
+        android:text="@string/id"
+        android:typeface="sans"
+        android:layout_marginHorizontal="25dp"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextId1_2"
+            style="@style/edittext1"
+            android:layout_marginHorizontal="20dp"
+            android:hint="@string/inputid"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView1_2" />
+
+        <Button
+            android:id="@+id/btncheck"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="@string/check"
+            android:textColor="@color/white"
+            android:background="@drawable/shape4"
+            />
+    </LinearLayout>
+
+    <TextView
         android:id="@+id/textView3_2"
         style="@style/textview1"
         android:text="@string/name"
@@ -29,23 +61,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3_2" />
-
-    <TextView
-        android:id="@+id/textView1_2"
-        style="@style/textview1"
-        android:text="@string/id"
-        android:typeface="sans"
-        android:layout_marginHorizontal="25dp"
-        />
-    <EditText
-        android:id="@+id/editTextId1_2"
-        style="@style/edittext1"
-        android:hint="@string/inputid"
-        android:inputType="text"
-        android:layout_marginHorizontal="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1_2" />
 
     <TextView
         android:id="@+id/textView2_2"
@@ -104,6 +119,7 @@
         android:text="@string/signup"
         android:layout_marginHorizontal="25dp"
         android:background="@drawable/shape3"
+        android:textColor="@color/white"
          />
 
 </LinearLayout>

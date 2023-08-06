@@ -22,6 +22,22 @@ class SignUpActivity : AppCompatActivity() {
         val edit_age2 = findViewById<EditText>(R.id.editTextAge4_2)
         val edit_mbti2 = findViewById<EditText>(R.id.editTextMbti5_2)
         val button_calljoin2_2 = findViewById<Button>(R.id.btnjoin2_2)
+        val btn_check = findViewById<Button>(R.id.btncheck)
+
+        btn_check.setOnClickListener {
+            val id2 = edit_id2.text.toString()
+            val idcheck = idCheck(id2)
+            if(!id2.isEmpty()){
+                if(idcheck){
+                    Toast.makeText(this,"중복된 아이디가 존재 합니다.",Toast.LENGTH_SHORT).show()
+                }else{
+                    Toast.makeText(this,"사용 가능한 아이디 입니다.",Toast.LENGTH_SHORT).show()
+                }
+            }
+            else{
+                Toast.makeText(this,"아이디를 입력해주세요",Toast.LENGTH_SHORT).show()
+            }
+        }
         button_calljoin2_2.setOnClickListener {
             val name2 = edit_name2.text.toString()
             val id2 = edit_id2.text.toString()
